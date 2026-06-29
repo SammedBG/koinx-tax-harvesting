@@ -39,12 +39,12 @@ export default function CapitalGainsCard({ title, data, dark, savings }) {
         </div>
       )}
 
-      <GainSection title="Short-Term Gains" data={data.stcg} dark={dark} />
-      <GainSection title="Long-Term Gains" data={data.ltcg} dark={dark} />
+      <GainSection title="Short-term" data={data.stcg} dark={dark} />
+      <GainSection title="Long-term" data={data.ltcg} dark={dark} />
 
       <div className={`rounded-xl px-4 py-3 mt-auto ${dark ? 'bg-white/5' : 'bg-white/15'}`}>
         <div className="flex justify-between items-center">
-          <span className="text-sm font-semibold text-white">Realised Capital Gains</span>
+          <span className="text-sm font-semibold text-white">Effective Capital Gains</span>
           <span className={`text-base font-bold ${data.realised < 0 ? 'text-red-400' : 'text-white'}`}>
             {formatCurrency(data.realised)}
           </span>

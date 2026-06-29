@@ -66,7 +66,7 @@ export default function HoldingsTable({ holdings, selectedIds, onToggle, onToggl
                   className="w-4 h-4 rounded accent-blue-500 cursor-pointer"
                 />
               </th>
-              {['Asset', 'Holdings / Avg Buy Price', 'Current Price', 'Short-Term Gain', 'Long-Term Gain', 'Amount to Sell'].map(h => (
+              {['Asset', 'Holdings', 'Current Value', 'Short-term', 'Long-term', 'Amount to Sell'].map(h => (
                 <th key={h} className="p-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{h}</th>
               ))}
             </tr>

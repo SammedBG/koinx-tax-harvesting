@@ -57,9 +57,35 @@ export default function App() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-white mb-1">Tax Loss Harvesting</h1>
-          <p className="text-slate-400 text-sm">Select holdings below to simulate harvesting losses and reduce your tax liability.</p>
+        <div className="mb-6 sm:mb-8">
+          <div className="flex items-start gap-3 mb-3">
+            <div className="mt-1 h-3.5 w-3.5 rounded-full border border-blue-400/70 text-blue-400 flex items-center justify-center text-[10px] leading-none">
+              i
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-white">Tax Harvesting</h1>
+              <p className="text-slate-400 text-sm mt-1">Tax loss harvesting helps reduce capital gains tax by selling selected holdings at a loss.</p>
+            </div>
+          </div>
+
+          <details className="group rounded-xl border border-blue-500/30 bg-[#111827] overflow-hidden">
+            <summary className="cursor-pointer list-none px-4 py-3 flex items-center justify-between text-sm font-medium text-slate-100">
+              <span className="flex items-center gap-2">
+                <span className="h-4 w-4 rounded-full border border-blue-400/80 text-blue-400 flex items-center justify-center text-[10px] leading-none">
+                  i
+                </span>
+                Important Notes & Disclaimers
+              </span>
+              <span className="text-slate-400 group-open:rotate-180 transition-transform">⌄</span>
+            </summary>
+            <div className="px-4 pb-4 text-sm text-slate-300 space-y-2 border-t border-blue-500/20">
+              <p>• Tax-loss harvesting is currently not allowed under Indian tax regulations. Please consult your tax advisor before making any decisions.</p>
+              <p>• Tax harvesting does not apply to derivatives or futures. These are handled separately as business income under tax rules.</p>
+              <p>• Price and market value data is fetched from CoinGecko, not from individual exchanges. As a result, values may slightly differ from the ones on your exchange.</p>
+              <p>• Some countries do not have a short-term / long-term bifurcation. For now, we are calculating everything as long-term.</p>
+              <p>• Only realised losses are considered for harvesting. Unrealized losses in held assets are not counted.</p>
+            </div>
+          </details>
         </div>
 
         {error && (
