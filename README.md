@@ -59,4 +59,8 @@ src/
 
 ## Deployed Link
 
-Add the final hosted URL here after deploying the app to Vercel, Netlify, or a similar platform.
+https://koinx-tax-harvesting-pink.vercel.app/
+
+## Final Submission
+
+This repository is ready for submission with the deployed app linked above. Add any final screenshots you want to include before sending the assignment form.
