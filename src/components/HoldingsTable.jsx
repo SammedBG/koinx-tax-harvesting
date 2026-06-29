@@ -22,7 +22,7 @@ function AssetCell({ holding }) {
         src={holding.logo}
         alt={holding.coin}
         className="w-8 h-8 rounded-full object-cover bg-slate-700 flex-shrink-0"
-        onError={e => { e.target.src = 'https://koinx-statics.s3.ap-south-1.amazonaws.com/currencies/DefaultCoin.svg'; }}
+        onError={event => { event.currentTarget.src = 'https://koinx-statics.s3.ap-south-1.amazonaws.com/currencies/DefaultCoin.svg'; }}
       />
       <div>
         <div className="text-sm font-semibold text-white">{holding.coin}</div>

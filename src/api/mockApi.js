@@ -37,7 +37,17 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const fetchHoldings = async () => {
   await delay(800);
-  return HOLDINGS_DATA.map((h, i) => ({ ...h, id: `${h.coin}-${i}` }));
+  return [...HOLDINGS_DATA]
+    .sort((left, right) => {
+      const gainDelta = Math.abs(right.stcg.gain) - Math.abs(left.stcg.gain);
+      if (gainDelta !== 0) return gainDelta;
+
+      const symbolDelta = left.coin.localeCompare(right.coin);
+      if (symbolDelta !== 0) return symbolDelta;
+
+      return left.coinName.localeCompare(right.coinName);
+    })
+    .map((holding, index) => ({ ...holding, id: `${holding.coin}-${index}` }));
 };
 
 export const fetchCapitalGains = async () => {

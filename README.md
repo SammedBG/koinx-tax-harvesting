@@ -12,6 +12,14 @@ A responsive React application for simulating tax loss harvesting on crypto hold
 - **Skeleton Loaders** — smooth loading states for both API calls
 - **Mobile Responsive** — works on all screen sizes
 
+## Screenshots
+
+Add screenshots of the final UI here after deployment. Suggested captures:
+
+- Desktop pre-harvesting and after-harvesting state
+- Selected holdings state with savings message visible
+- Mobile layout
+
 ## Setup
 
 ```bash
@@ -28,6 +36,7 @@ npm run build
 ## Tech Stack
 
 - React 18 + Vite
+- ESLint 9
 - Tailwind CSS v3
 - Mock APIs via in-app Promises (no server needed)
 
@@ -47,3 +56,7 @@ src/
 - "Amount to Sell" column shows totalHolding when row is selected
 - Assets sorted by absolute STCG gain descending (largest impact first)
 - Default table shows 8 rows; "View All" expands to full list
+
+## Deployed Link
+
+Add the final hosted URL here after deploying the app to Vercel, Netlify, or a similar platform.
